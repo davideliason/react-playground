@@ -20,7 +20,17 @@
   },
   "homepage": "https://github.com/davideliason/react-playground#readme",
   "dependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "webpack": "^4.12.0"
+  },
+  "babel": {
+    "presets": {
+      "es2015",
+      "react"
+    }
   }
 }
