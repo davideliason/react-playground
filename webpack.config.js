@@ -9,6 +9,12 @@ var config = {
 	output: {
 		path: PRODUCTION,
 		filename: "myCode.js"
+	},
+	module: {
+		loaders: [{
+			include: DEV,
+			loader: "babel"
+		}]
 	}
 }
 
