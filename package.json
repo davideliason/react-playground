@@ -1,0 +1,26 @@
+{
+  "name": "react-playground",
+  "version": "1.0.0",
+  "description": "explore different aspects of React by building mini-apps within parent SPA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davideliason/react-playground.git"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "David Eliason",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davideliason/react-playground/issues"
+  },
+  "homepage": "https://github.com/davideliason/react-playground#readme",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
+}
