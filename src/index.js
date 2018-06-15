@@ -5,4 +5,4 @@ const Index = () => {
 	return <div>hello world</div>;
 };
 
-ReactDOM.render(<Index />,document.querySelector("#container"));
+ReactDOM.render(<Index />,document.getElementById("index"));
