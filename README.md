@@ -5,6 +5,35 @@
 ## What
 Exploring different skillsets around React in mini-apps all within a SPA
 
+## Why
+Diving deep into various niches of React, JS and libraries, and each mini-app will serve as a refresher (and practice) for later review
+
+### Okay, show me please:
+
+1. Single Page App (SPA)
+   * build out navigation using react-router linking mini-apps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Resources
+
+#### Webpack & React
+
 [good template](https://github.com/pinglinh/simple_webpack_boilerplate)
 
 # Simple webpack boilerplate

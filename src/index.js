@@ -1,8 +1,14 @@
-import React from "react";
+import React, {Component} from "react";
 import ReactDOM from "react-dom";
 
-const Index = () => {
-  return <div>React Playground</div>;
-};
+class App extends React.Component {
+	render() {
+		return (
+				<div>
+					<h3>React Playground</h3>
+				</div>
+			);
+	}
+}
 
-ReactDOM.render(<Index />, document.getElementById("container"));
+ReactDOM.render(<App />, document.getElementById("container"));
