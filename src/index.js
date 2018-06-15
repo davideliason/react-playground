@@ -5,4 +5,4 @@ const Index = () => {
   return <div>React Playground</div>;
 };
 
-ReactDOM.render(<Index />, document.getElementById("index"));
+ReactDOM.render(<Index />, document.getElementById("container"));
