@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from './Home.js';
+import Colorizer from './Colorizer'
 
 const App = () => (
   <Router>
@@ -11,7 +12,7 @@ const App = () => (
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/colorizer">Colorizer</Link>
         </li>
         <li>
           <Link to="/topics">Topics</Link>
@@ -21,18 +22,10 @@ const App = () => (
       <hr />
 
       <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
+      <Route path="/colorizer" component={Colorizer} />
       <Route path="/topics" component={Topics} />
     </div>
   </Router>
-);
-
-
-
-const About = () => (
-  <div>
-    <h2>About</h2>
-  </div>
 );
 
 const Topics = ({ match }) => (
