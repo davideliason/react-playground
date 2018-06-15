@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Home from './Home.js';
 
 const App = () => (
   <Router>
@@ -26,12 +27,7 @@ const App = () => (
   </Router>
 );
 
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-    <p>Here lie a variety of mini-apps exploring different JS, React, libraries. Enjoy!</p>
-  </div>
-);
+
 
 const About = () => (
   <div>
