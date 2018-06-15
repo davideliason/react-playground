@@ -29,6 +29,7 @@ const App = () => (
 const Home = () => (
   <div>
     <h2>Home</h2>
+    <p>Here lie a variety of mini-apps exploring different JS, React, libraries. Enjoy!</p>
   </div>
 );
 
