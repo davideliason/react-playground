@@ -1,1 +1,8 @@
-console.log("hello webpack works");
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const Index = () => {
+	return <div>hello world</div>;
+};
+
+ReactDOM.render(<Index />,document.querySelector("#container"));
