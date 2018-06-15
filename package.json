@@ -4,8 +4,8 @@
   "description": "react playground",
   "main": "index.js",
   "scripts": {
-   "start": "webpack-dev-server --mode development --open",
-   "build": "webpack --mode production"
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
   "homepage": "https://github.com/davideliason/react-playground#readme",
   "dependencies": {
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
