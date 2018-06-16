@@ -34,8 +34,7 @@ class Colorizer extends React.Component {
 			backgroundColor: this.state.bgColor,
 			width: 500,
 			height: 480,
-			padding: 0
-
+			padding: 20,
 		}
 
 		var self = this;
