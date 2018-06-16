@@ -28,11 +28,23 @@ const StarWars = ({ match }) => (
   </div>
 );
 
+{/*
 const Topic = ({ match }) => (
   <div>
     <h3>{match.params.topicId}</h3>
   </div>
 );
+
+*/}
+
+class Topic extends React.Component {
+	render() {
+		return (
+			<p>{this.props.match.params.topicId}</p>
+		)
+	}
+}
+
 
 export default StarWars;
 
