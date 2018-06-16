@@ -38,9 +38,26 @@ const Topic = ({ match }) => (
 */}
 
 class Topic extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			topic: ""
+		}
+	}
+
+	componentWillMount() {
+		this.setState({
+			topic: this.props.match.params.topicId
+		});
+	}
 	render() {
 		return (
+		  <div>
 			<p>{this.props.match.params.topicId}</p>
+			<h2>{this.state.topic} </h2>
+
+		  </div>
+
 		)
 	}
 }
