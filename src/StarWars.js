@@ -11,7 +11,7 @@ const StarWars = ({ match }) => (
         <Link to={`${match.url}/planets`}>Planets</Link>
       </li>
       <li>
-        <Link to={`${match.url}/spaceships`}>Spaceships</Link>
+        <Link to={`${match.url}/starships`}>Spaceships</Link>
       </li>
       <li>
         <Link to={`${match.url}/vehicles`}>Vehicles</Link>
@@ -34,13 +34,16 @@ class Topic extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			planet: "",
-      spaceship: "",
-      vehicle: "",
-      person: "",
-      topic: ""
+			planet: "Tatooine",
+      starship: "Death Star",
+      vehicle: "Sand Crawler",
+      person: "Luke Skywalker",
+      topic: "",
+      querySubject: ""
 		}
 	}
+
+  
 
 	componentWillMount() {
 		this.setState({
@@ -49,7 +52,8 @@ class Topic extends React.Component {
 	}
 
   componentDidMount() {
-    fetch(API + this.state.topic + '/?search=r2')
+    
+    fetch(API + this.state.topic + '/?search=' + this.state.person)
       .then(response => response.json())
       .then(data => this.setState({person : data.results[0].name}))
   }
@@ -57,7 +61,7 @@ class Topic extends React.Component {
 		return (
 		  <div>
 			<p>{this.props.match.params.topicId}</p>
-      <p>"here's the url" + {API + this.state.topic + '/?search=r2'}</p>
+      <p>"here's the url" + {API + this.state.topic + '/?search=' + this.state.planet}</p>
 			<h2>{this.state.topic} </h2>
       <h3>Here's the name: {this.state.person}</h3>
 
