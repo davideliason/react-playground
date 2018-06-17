@@ -1,6 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+const API = 'https://swapi.co/api/';
+const DEFAULT_QUERY = 'planets/1/';
+
 const StarWars = ({ match }) => (
   <div>
     <h2>Topics</h2>
@@ -28,15 +31,6 @@ const StarWars = ({ match }) => (
   </div>
 );
 
-{/*
-const Topic = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
-  </div>
-);
-
-*/}
-
 class Topic extends React.Component {
 	constructor(props) {
 		super(props);
@@ -50,6 +44,12 @@ class Topic extends React.Component {
 			topic: this.props.match.params.topicId
 		});
 	}
+
+  componentDidMount() {
+    fetch(API + DEFAULT_QUERY)
+      .then(response => response.json())
+      .then(data => this.setState({topic : data.name}))
+  }
 	render() {
 		return (
 		  <div>
