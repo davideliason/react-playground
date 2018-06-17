@@ -7,7 +7,10 @@ const StarWars = ({ match }) => (
   <div>
     <h2>Topics</h2>
     <ul>
-      <li>
+      {/* 
+
+       <li>
+      }
         <Link to={`${match.url}/planets`}>Planets</Link>
       </li>
       <li>
@@ -16,6 +19,9 @@ const StarWars = ({ match }) => (
       <li>
         <Link to={`${match.url}/vehicles`}>Vehicles</Link>
       </li>
+
+      */}
+
        <li>
         <Link to={`${match.url}/people`}>People</Link>
       </li>
