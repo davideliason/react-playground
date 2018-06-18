@@ -40,10 +40,11 @@ class Topic extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			planet: "Tatooine",
-      starship: "Death Star",
-      vehicle: "Sand Crawler",
-      person: "Luke Skywalker",
+			planet: "",
+      starship: "",
+      vehicle: "",
+      personName: "Luke Skywalker",
+      personHairColor: "",
       topic: "",
       querySubject: ""
 		}
@@ -59,17 +60,17 @@ class Topic extends React.Component {
 
   componentDidMount() {
     
-    fetch(API + this.state.topic + '/?search=' + this.state.person)
+    fetch(API + this.state.topic + '/?search=' + this.state.personName)
       .then(response => response.json())
-      .then(data => this.setState({person : data.results[0].name}))
+      .then(data => this.setState({ personName : data.results[0].name,
+                                    personHairColor: data.results[0].hair_color
+                                  }))
   }
 	render() {
 		return (
 		  <div>
-			<p>{this.props.match.params.topicId}</p>
-      <p>"here's the url" + {API + this.state.topic + '/?search=' + this.state.planet}</p>
-			<h2>{this.state.topic} </h2>
-      <h3>Here's the name: {this.state.person}</h3>
+      <h3>Name: {this.state.personName}</h3>
+      <p> Hair color: {this.state.personHairColor} </p>
 
 		  </div>
 
