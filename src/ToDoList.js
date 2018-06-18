@@ -5,10 +5,17 @@ class TodoList extends Component {
 	constructor(props) {
     super(props);
      this.state = {
-    items: []
-  };
+       items: []
+     };
  
     this.addItem = this.addItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
+  }
+
+  deleteItem(x) {
+    this.setState({
+    	items: this.state.items.filter(el => el !== x)
+    })
   }
 
   addItem(e) {
@@ -44,7 +51,7 @@ class TodoList extends Component {
             <button type="submit">add</button>
           </form>
         </div>
-        <TodoItems entries={this.state.items}/>
+        <TodoItems delete={this.deleteItem} entries={this.state.items}/>
       </div>
     );
   }
