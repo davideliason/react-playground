@@ -5,6 +5,7 @@ class PlanetList extends React.Component {
 		return (
 			  <div>
 			  	<p>PlanetList</p>
+			  	{this.props.planets[0].name}
 			  </div>
 			);
 	}

@@ -8,7 +8,7 @@ class StarWarsII extends React.Component {
 	render() {
 		return (
 			<div>	
-				<PlanetList />
+				<PlanetList planets={planets} />
 			</div>
 			);
 	}
