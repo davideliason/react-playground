@@ -11,18 +11,34 @@ class ToDoList extends React.Component {
 		this.addItem = this.addItem.bind(this);
 	}
 
-	addItem = (e) => {
-		
-	}
+	addItem(e) {
+		  if (this._inputElement.value !== "") {
+		    var newItem = {
+		      text: this._inputElement.value,
+		      key: Date.now()
+		    };
+		 
+		    this.setState((prevState) => {
+		      return { 
+		        todos: prevState.todos.concat(newItem) 
+		      };
+		    });
+		   
+		    this._inputElement.value = "";
+		  }
+		   
+		  console.log(this.state.todos);
+		     
+		  e.preventDefault();
+}
 
 	render() {
 		return (
 				<div>
 					<form onSubmit={this.addItem}>
-						<input type="text" 
-						 placeholder="enter todo"
-						 ref=( (a) => this._inputElement = a)
-						  />
+						 <input ref={(a) => this._inputElement = a} 
+                 	    	 placeholder="enter task">
+          				 </input>
 						<button type="submit">add</button>
 					</form>
 				</div>
