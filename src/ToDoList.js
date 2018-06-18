@@ -4,10 +4,27 @@ import React, { Component } from 'react';
 class ToDoList extends React.Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			todos : [],
+			item : ""
+		}
+	}
+
+	addItem = () => {
+		this.setState({
+
+		})
 	}
 	render() {
 		return (
-				<div>test</div>
+				<div>
+					<form onSubmit={this.addItem}>
+						<input type="text" 
+						 placeholder="enter todo"
+						  />
+						<button type="submit">add</button>
+					</form>
+				</div>
 			)
 	}
 }
