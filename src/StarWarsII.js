@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import planets from './planet_data';
+import PlanetList from './PlanetList';
 
 
 
@@ -7,8 +8,7 @@ class StarWarsII extends React.Component {
 	render() {
 		return (
 			<div>	
-			  <p>{planets[0].name}</p>
-
+				<PlanetList />
 			</div>
 			);
 	}
