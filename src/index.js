@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from './Home.js';
 import Colorizer from './Colorizer';
 import StarWars from './StarWars';
+import ToDoList from './ToDoList';
 
 
 const App = () => (
@@ -19,6 +20,9 @@ const App = () => (
         <li>
           <Link to="/starwars">Star Wars</Link>
         </li>
+        <li>
+          <Link to="/todolist">ToDo List</Link>
+        </li>
       </ul>
 
       <hr />
@@ -26,6 +30,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route path="/colorizer" component={Colorizer} />
       <Route path="/starwars" component={StarWars} />
+      <Route path="/todolist" component={ToDoList} />
     </div>
   </Router>
 );
