@@ -1,12 +1,26 @@
 import React, {Component} from 'react';
 
 class PlanetList extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.createPlanet = this.createPlanet.bind(this);
+	}
+
+    createPlanet(planet) {
+    	return (
+    			<li key={planet.key}>{planet.name}</li>
+    		);
+    }
+
 	render() {
+		var planetEntries = this.props.planets;
+		var planetList = planetEntries.map(this.createPlanet);
+
 		return (
-			  <div>
-			  	<p>PlanetList</p>
-			  	{this.props.planets[0].name}
-			  </div>
+			  	<ul>
+			  		{planetList}
+			  	</ul>
 			);
 	}
 }
