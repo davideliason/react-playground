@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 function NumberList(props) {
 	var nums = props.numbers;
-	var numElements = nums.map( (x) => <li>{x * 5}</li> );
+	var numElements = nums.map( (x) => <li key={x.toString()}>{x * 5}</li> );
 
 	return(
 		<ul>{numElements}</ul>
