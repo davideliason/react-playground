@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 function NumberList(props) {
 	var nums = props.numbers;
-	var numElements = nums.map( (x) => <li key={x.toString()}>{x * 5}</li> );
+	var numElements = nums.map( (x, index) => <li key={index}>{x * 5}</li> );
 
 	return(
 		<ul>{numElements}</ul>
@@ -22,7 +22,9 @@ class Sandbox extends React.Component {
 		return (
 				<div>
 					<p>Sandbox</p>
-					<NumberList numbers={propsNumbers} />
+					<ul>
+						{propsNumbers.map((num) => <li key={num.toString()}>{num * 33}</li> )}
+					</ul>
 				</div>
 			);
 	}
