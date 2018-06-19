@@ -7,16 +7,18 @@ class Planet extends React.Component {
 
 	
 
-	render() {
-		var displayPlanet = this.props.displayPlanet;
-		var planetsKeys = Object.keys(displayPlanet);
-		return (
-				<div>
-					<p>{displayPlanet.climate}</p>
-					<p>name: {planetsKeys[1]}</p>
-				</div>
-			);
-	}
+	render(){
+		  const planet= this.props.displayPlanet;  // Essentially does: const vals = this.state.vals;
+		  return (
+		    <div>
+		      {
+		        Object.keys(planet).map((key, index) => ( 
+		          <p key={index}> this is my key {key} and this is my value {planet[key]}</p> 
+		        ))
+		      }
+		    </div>
+		  )
+		}
 }
 
 export default Planet
