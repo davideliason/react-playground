@@ -1,29 +1,28 @@
 import React, {Component} from 'react';
 
+function NumberList(props) {
+	var nums = props.numbers;
+	var numElements = nums.map( (x) => <li>{x * 5}</li> );
+
+	return(
+		<ul>{numElements}</ul>
+	)
+}
+
 class Sandbox extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			numbers: [1,2,3]
 		}
-		this.createNumbs = this.createNumbs.bind(this);
-	}
-
-	createNumbs(x) {
-		return (
-			  <li key={x}>{x * 2}</li>
-			);
 	}
 
 	render() {
 		var propsNumbers = this.state.numbers;
-		var displayList = propsNumbers.map((x) =><li>{x * 3}</li>);
 		return (
 				<div>
 					<p>Sandbox</p>
-					<ul>
-					  {displayList}
-					</ul>
+					<NumberList numbers={propsNumbers} />
 				</div>
 			);
 	}
