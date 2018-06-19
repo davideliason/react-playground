@@ -5,6 +5,7 @@ import Home from './Home.js';
 import Colorizer from './Colorizer';
 import StarWars from './StarWars';
 import StarWarsII from './StarWarsII';
+import Sandbox from './Sandbox';
 
 import ToDoList from './ToDoList';
 
@@ -28,6 +29,9 @@ const App = () => (
         <li>
           <Link to="/todolist">ToDo List</Link>
         </li>
+        <li>
+          <Link to="/sandbox">Sandbox</Link>
+        </li>
       </ul>
 
       <hr />
@@ -37,6 +41,8 @@ const App = () => (
       <Route path="/starwars" component={StarWars} />
       <Route path="/starwarsII" component={StarWarsII} />
       <Route path="/todolist" component={ToDoList} />
+      <Route path="/sandbox" component={Sandbox} />
+
     </div>
   </Router>
 );
