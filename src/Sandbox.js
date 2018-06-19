@@ -1,42 +1,33 @@
 import React, {Component} from 'react';
 
-function WarningComponent(props) {
-	if(!props.warning) {
-		return null;
-	}
-
-	return (
-			<div>
-				<h3>Warning!</h3>
-			</div>
-		);
-}
-
 class Sandbox extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			warning: false
+			numbers: [1,2,3]
 		}
-
-		this.toggleWarning = this.toggleWarning.bind(this);
+		this.createNumbs = this.createNumbs.bind(this);
 	}
 
-	toggleWarning() {
-		this.setState(prevState => ({
-			warning: !prevState.warning
-		}));
+	createNumbs(x) {
+		return (
+			  <li key={x}>{x * 2}</li>
+			);
 	}
 
 	render() {
+		var propsNumbers = this.state.numbers;
+		var displayList = propsNumbers.map(this.createNumbs);
 		return (
 				<div>
-					<h3> Sandbox </h3>
-					<WarningComponent warning={this.state.warning} /> 
-					<button onClick={this.toggleWarning}>toggle</button>
+					<p>Sandbox</p>
+					<ul>
+					  {displayList}
+					</ul>
 				</div>
 			);
 	}
+
 }
 
 export default Sandbox
