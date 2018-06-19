@@ -8,14 +8,17 @@ class Planet extends React.Component {
 	
 
 	render(){
+		  var planetStyle = { listStyleType: "none"} ;
 		  const planet= this.props.displayPlanet;  // Essentially does: const vals = this.state.vals;
 		  return (
 		    <div>
+		      <ul>
 		      {
 		        Object.keys(planet).map((key, index) => ( 
-		          <p key={index}> this is my key {key} and this is my value {planet[key]}</p> 
+		          <li style={planetStyle} key={index}> {key} : {planet[key]}</li> 
 		        ))
 		      }
+		      </ul>
 		    </div>
 		  )
 		}
