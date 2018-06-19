@@ -17,7 +17,7 @@ class Sandbox extends React.Component {
 
 	render() {
 		var propsNumbers = this.state.numbers;
-		var displayList = propsNumbers.map(this.createNumbs);
+		var displayList = propsNumbers.map((x) =><li>{x * 3}</li>);
 		return (
 				<div>
 					<p>Sandbox</p>
