@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+
 class PlanetList extends React.Component {
 	constructor(props) {
 		super(props);
@@ -18,11 +19,15 @@ class PlanetList extends React.Component {
 		var planetList = planetEntries.map(this.createPlanet);
 
 		return (
-			  	<ul>
-			  		{planetList}
-			  	</ul>
+				<div>
+				  	<ul>
+				  		{planetList}
+				  	</ul>
+				</div>
 			);
 	}
 }
+
+
 
 export default PlanetList;
