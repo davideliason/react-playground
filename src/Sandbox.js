@@ -13,11 +13,27 @@ function WarningComponent(props) {
 }
 
 class Sandbox extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			warning: false
+		}
+
+		this.toggleWarning = this.toggleWarning.bind(this);
+	}
+
+	toggleWarning() {
+		this.setState(prevState => ({
+			warning: !prevState.warning
+		}));
+	}
+
 	render() {
 		return (
 				<div>
 					<h3> Sandbox </h3>
-					<WarningComponent warning={true} /> 
+					<WarningComponent warning={this.state.warning} /> 
+					<button onClick={this.toggleWarning}>toggle</button>
 				</div>
 			);
 	}
