@@ -5,7 +5,9 @@ import PlanetList from './PlanetList';
 
 
 class StarWarsII extends React.Component {
+
 	render() {
+		
 		return (
 			<div>	
 				<PlanetList planets={planets} />
