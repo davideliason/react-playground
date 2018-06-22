@@ -28,14 +28,32 @@ class Topic extends React.Component {
 			planet: "",
       starship: "",
       vehicle: "",
-      personName: "Luke Skywalker",
+      personName: "",
       personHairColor: "",
       topic: "",
       querySubject: ""
 		}
+    this.doUpdate = this.doUpdate.bind(this);
+    this.updatePersonName = this.updatePersonName.bind(this);
 	}
 
-  
+  doUpdate(x){
+    this.setState({
+      querySubject : x
+    });
+  }
+
+  updatePersonName(x){
+    if (this._inputElement.value !== "") {
+      this.setState({
+        personName: this._inputElement.value
+      })
+      this._inputElement.value = "";
+    }
+    x.preventDefault();
+
+  }
+ 
 
 	componentWillMount() {
 		this.setState({
@@ -47,13 +65,23 @@ class Topic extends React.Component {
     
     fetch(API + this.state.topic + '/?search=' + this.state.personName)
       .then(response => response.json())
-      .then(data => this.setState({ personName : data.results[0].name,
+      .then(data => this.setState({ 
                                     personHairColor: data.results[0].hair_color
-                                  }))
-  }
+                                  })
+    }
+    
 	render() {
 		return (
 		  <div>
+
+       <form onSubmit={this.updatePersonName}>
+            <input 
+              ref={(a) => this._inputElement = a} 
+              placeholder="enter name">
+            </input>
+            <button type="submit">find</button>
+          </form>
+
       <h3>Name: {this.state.personName}</h3>
       <p> Hair color: {this.state.personHairColor} </p>
 

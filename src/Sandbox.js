@@ -1,34 +1,17 @@
 import React, {Component} from 'react';
 
-function NumberList(props) {
-	var nums = props.numbers;
-	var numElements = nums.map( (x, index) => <li key={index}>{x * 5}</li> );
-
-	return(
-		<ul>{numElements}</ul>
-	)
-}
-
 class Sandbox extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			numbers: [1,2,3]
-		}
-	}
-
-	render() {
-		var propsNumbers = this.state.numbers;
+	render(){
 		return (
-				<div>
-					<p>Sandbox</p>
-					<ul>
-						{propsNumbers.map((num) => <li key={num.toString()}>{num * 33}</li> )}
-					</ul>
-				</div>
-			);
+				 <div>
+   					 <h2>Sandbox</h2>
+   					 <p>Here lie a variety of mini-apps exploring different JS, React, libraries</p>
+   					 <p> 'Star Wars' displays proof of concept in that the child component receives state props from parent, and fetches API for content setting local state and rendering.</p>
+  				 </div>
+				);
+			}
 	}
 
-}
 
-export default Sandbox
+
+export default Sandbox;
